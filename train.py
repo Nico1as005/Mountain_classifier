@@ -79,7 +79,6 @@ def main():
     except ValueError as e:
         print(f"Кросс-валидация не удалась: {e}")
 
-    # --- Финальное обучение на всех данных ---
     clf.fit(X, y)
 
     importances = pd.Series(clf.feature_importances_, index=FEATURE_NAMES).sort_values(ascending=False)
